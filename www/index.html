@@ -1,0 +1,105 @@
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="/www/img/favicon.ico">
+<title> Clouds Weight | International Group</title>
+<meta charset="UTF-8">
+<meta name="description" content="A collection of projects and happenings, mostly from github.com/CloudsWeight repositories.">
+<meta name="keywords" content="Cloudsweight, Clouds weight, independent, development, delphi method, agile, scrum, small team">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Clouds Weight">    
+<link rel="stylesheet" href="/www/css/clouds.css">
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+<!-- leaflet stuff -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+</head>
+<!--
+  ___ __    __  _  _ ____ ____       
+ / __(  )  /  \/ )( (    / ___)      
+( (__/ (_/(  O ) \/ () D \___ \      
+ ____\____/_________(_________/      
+/ )( (  __(  / __/ )( (_  _)         
+\ /\ /) _) )( (_ ) __ ( )(           
+(_/\_(____(__\___\_)(_/(__)         
+
+-->
+<body class="scale_element">
+<header>
+    <div><a href="https://cloudsweight.com"><img src="www/img/header.png" onmouseover="this.src='www/img/headerflsh.png'" onmouseout="this.src='www/img/header.png'" id="imgFlsh" /></a>
+    </div>
+</header>
+<!-- Sidebar -->
+<aside> 
+  <a href="https://cloudsweight.com"> <p>Home</p>
+  </a>
+  <a href="javascript:void(0)">
+    <i class="articles-list" aria-hidden="true"></i>
+    Articles
+  </a>
+  <a href="javascript:void(0)">
+    <i class="videos-list" aria-hidden="true"></i>
+    Videos
+  </a>
+  <a href="javascript:void(0)">
+    <i class="news-list" aria-hidden="true"></i>
+    Curated News
+  </a>
+  <a href="https://blenno.com/mag/mag.html#page/2">
+    <i class="brac-list" aria-hidden="true"></i>
+    Bric-a-brac
+  </a>
+  <a href="https://github.com/CloudsWeight" class="git-list">
+      <svg height="32" aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="32" data-view-component="true" class="octicon octicon-mark-github v-align-middle color-fg-default">
+    <path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"></path></svg>
+    </a>
+</aside>
+<div class="layer">
+   <div class="note"> 
+    <ul>
+         <div class="article">
+            <a href="articles/leafletjs-and-local-storage.html"><h1>Understanding Leaflet.JS Notes</h1>
+            </a>
+        </div>
+        <div>
+            
+            <div id="tutorial">
+                <p>  This map gathers your location data to show where your client request is located.  Clicking the "Randomize" button will take you to a random part of the world.</p>  
+<p>Try it!</p>
+</div>
+<!-- 27.171165982 , 78.038666512 -->
+<button id="pyramidCoords" onclick="seePyramids()">The Pyramids</button>
+<button id="caracolCoords" onclick="seeCaracol()">Caracol</button>
+<button id="tajCoords" onclick="seeTaj()">Taj Mahal</button>
+<button id="randomization" onclick="randoButt()">Randomize</button> 
+<button id="locationSet" onclick="coordButt()">Set Location</button>
+<input type="text" id="latInput" placeholder="Latitude"><input type="text" id="lngInput" placeholder="Longitude">
+<div id="coords">
+</div>
+<div id="map"></div>
+            
+        </div>
+        <div class="article">
+            <h1><a href="articles/notes-on-selenium.html">Notes on Selenium</a></h1>
+    <div>
+        <span> <p>Welcome to the first of maybe more notes on IT ¯\(°_o)/¯.  The focus of this article will be on using Selenium to log in to a web app as a registered user. It's pretty simple and shouldn't take much to start testing as long as you have python and pip installed</p>
+            <p>First though, there are a few items to download to get the environment set up for testing.  Here's what to install and download.</p>
+            <ol>
+        <li>Install selenium on python3, from the CLI you can use: <code> pip3 install selenium</code> if pip is already installed</li> 
+        <li>Download Chrome Browser from <a href="https://www.google.com/chrome/">https://www.google.com/chrome/</a></li> 
+        <li> Install the specific WebDriver for your Chrome version from <a href="https://sites.google.com/chromium.org/driver/home?authuser=0">https://sites.google.com/chromium.org/driver/home?authuser=0</a></li></ol>
+        <a href="articles.html"><div> ... continue here.</div></a>
+        
+        </span>
+    </div>
+    </div>
+</ul>
+</div>
+</div>
+<script src="www/js/mapIt.js"></script>
+</body>
+</html>
